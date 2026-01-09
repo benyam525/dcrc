@@ -1346,6 +1346,12 @@
                 grid-template-columns: 1fr;
             }
 
+            .research-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.5rem;
+            }
+
             .research-grid {
                 grid-template-columns: 1fr;
             }
@@ -1353,11 +1359,23 @@
             .footer-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+
+            .hero-stats {
+                gap: 2rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
         }
 
         @media (max-width: 768px) {
             section {
                 padding: 4rem 0;
+            }
+
+            .container {
+                padding: 0 1.25rem;
             }
 
             .nav-links {
@@ -1372,15 +1390,135 @@
                 display: block;
             }
 
+            /* Hero Mobile */
+            .hero {
+                padding-top: 100px;
+                min-height: auto;
+                padding-bottom: 4rem;
+            }
+
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+
+            .hero-description {
+                font-size: 1.1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
             .hero-stats {
                 flex-wrap: wrap;
                 gap: 2rem;
+            }
+
+            .stat {
+                flex: 1 1 40%;
+                text-align: center;
             }
 
             .hero-image {
                 display: none;
             }
 
+            /* Mission Mobile */
+            .mission-vision {
+                padding: 2rem;
+            }
+
+            .mission-vision p {
+                font-size: 1.25rem;
+            }
+
+            /* Pillars Mobile */
+            .pillar-card {
+                padding: 2rem;
+            }
+
+            /* Impact Mobile */
+            .impact-card {
+                padding: 1.5rem;
+            }
+
+            .case-study-featured {
+                padding: 1.5rem;
+            }
+
+            .case-study-featured .case-study-content {
+                padding: 0;
+            }
+
+            .case-study-featured h3 {
+                font-size: 1.5rem;
+            }
+
+            .case-study-featured .case-study-image {
+                margin-top: 1.5rem;
+            }
+
+            .case-study-featured .case-study-image img {
+                height: 200px;
+            }
+
+            /* Research Mobile */
+            .research-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.5rem;
+            }
+
+            .research-header .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .research-card-image {
+                height: 180px;
+            }
+
+            /* Get Involved Mobile */
+            .newsletter-box {
+                padding: 1.5rem;
+            }
+
+            .action-list li {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.75rem;
+            }
+
+            /* Donate Mobile */
+            .donate {
+                padding: 4rem 0;
+            }
+
+            .donate h2 {
+                font-size: 1.75rem;
+            }
+
+            .donate-buttons {
+                flex-direction: column;
+            }
+
+            .donate-buttons .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            /* Partners Mobile */
+            .partners-grid {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            /* Footer Mobile */
             .footer-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
@@ -1389,6 +1527,84 @@
             .footer-bottom {
                 flex-direction: column;
                 text-align: center;
+            }
+
+            .footer-legal {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 1.85rem;
+            }
+
+            .hero-eyebrow {
+                font-size: 0.75rem;
+                padding: 0.4rem 0.75rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 0.875rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .stat-number {
+                font-size: 1.75rem;
+            }
+
+            .section-label {
+                font-size: 0.7rem;
+            }
+
+            .pillar-card {
+                padding: 1.5rem;
+            }
+
+            .pillar-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.25rem;
+            }
+
+            .impact-card-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .research-card-content {
+                padding: 1.25rem;
+            }
+
+            .newsletter-box {
+                padding: 1.25rem;
+            }
+
+            .donate-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+
+            .logo span {
+                display: none;
             }
         }
 
