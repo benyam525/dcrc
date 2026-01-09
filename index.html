@@ -1,0 +1,1755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Civil Rights Coalition | Protecting Privacy, Promoting Equity, Strengthening Democracy</title>
+    <meta name="description" content="The Digital Civil Rights Coalition advances digital civil rights by shaping how technology is designed, governed, and deployed—protecting privacy, promoting equity, and strengthening democratic accountability.">
+    <meta name="keywords" content="digital civil rights, AI governance, algorithmic bias, facial recognition policy, data privacy, tech accountability, civic technology, digital equity">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Digital Civil Rights Coalition">
+    <meta property="og:description" content="Shaping how technology is designed, governed, and deployed with humanity at the core.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --color-navy: #0a1628;
+            --color-navy-light: #152238;
+            --color-indigo: #1e3a5f;
+            --color-gold: #c9a227;
+            --color-gold-light: #e8c547;
+            --color-amber: #f5a623;
+            --color-cream: #faf8f5;
+            --color-white: #ffffff;
+            --color-gray-100: #f7f7f7;
+            --color-gray-200: #e5e5e5;
+            --color-gray-400: #9ca3af;
+            --color-gray-600: #4b5563;
+            --color-gray-800: #1f2937;
+
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, sans-serif;
+
+            --transition-fast: 0.2s ease;
+            --transition-medium: 0.4s ease;
+            --transition-slow: 0.6s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--color-gray-800);
+            background-color: var(--color-cream);
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
+        h4 { font-size: 1.25rem; }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .container-narrow {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .btn-primary {
+            background: var(--color-gold);
+            color: var(--color-navy);
+        }
+
+        .btn-primary:hover {
+            background: var(--color-gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(201, 162, 39, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-white);
+            border: 2px solid var(--color-white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-white);
+            color: var(--color-navy);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--color-navy);
+            border: 2px solid var(--color-navy);
+        }
+
+        .btn-outline:hover {
+            background: var(--color-navy);
+            color: var(--color-white);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 6rem 0;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 1rem;
+        }
+
+        .section-label i {
+            font-size: 0.7rem;
+        }
+
+        /* ==================== NAVIGATION ==================== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all var(--transition-medium);
+        }
+
+        nav.scrolled {
+            padding: 0.75rem 0;
+            background: rgba(10, 22, 40, 0.98);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--color-white);
+        }
+
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--color-gold), var(--color-amber));
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: var(--color-navy);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.8);
+            transition: color var(--transition-fast);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-gold);
+            transition: width var(--transition-fast);
+        }
+
+        .nav-links a:hover {
+            color: var(--color-white);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .nav-contact {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .nav-contact i {
+            color: var(--color-gold);
+            margin-right: 0.5rem;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--color-white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* ==================== HERO ==================== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--color-navy);
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+        }
+
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -30%;
+            width: 100%;
+            height: 200%;
+            background: radial-gradient(ellipse at center, rgba(30, 58, 95, 0.8) 0%, transparent 70%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: -20%;
+            width: 80%;
+            height: 150%;
+            background: radial-gradient(ellipse at center, rgba(201, 162, 39, 0.15) 0%, transparent 60%);
+            animation: pulse 10s ease-in-out infinite reverse;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.1); }
+        }
+
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 900px;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.5rem 1rem;
+            background: rgba(201, 162, 39, 0.15);
+            border: 1px solid rgba(201, 162, 39, 0.3);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--color-gold);
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .hero h1 {
+            color: var(--color-white);
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.1s forwards;
+            opacity: 0;
+        }
+
+        .hero h1 span {
+            color: var(--color-gold);
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.75);
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+            opacity: 0;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.3s forwards;
+            opacity: 0;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+            opacity: 0;
+        }
+
+        .stat {
+            text-align: left;
+        }
+
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-gold);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 0.5rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hero Image */
+        .hero-image {
+            position: absolute;
+            right: -5%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 45%;
+            max-width: 600px;
+            opacity: 0.15;
+            z-index: 1;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* ==================== MISSION ==================== */
+        .mission {
+            background: var(--color-white);
+            position: relative;
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .mission-content h2 {
+            color: var(--color-navy);
+            margin-bottom: 1.5rem;
+        }
+
+        .mission-content p {
+            color: var(--color-gray-600);
+            font-size: 1.1rem;
+        }
+
+        .mission-vision {
+            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-indigo) 100%);
+            padding: 3rem;
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mission-vision::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(201, 162, 39, 0.3) 0%, transparent 70%);
+        }
+
+        .mission-vision h4 {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 1rem;
+        }
+
+        .mission-vision p {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--color-white);
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .mission-image {
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .mission-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* ==================== PILLARS ==================== */
+        .pillars {
+            background: var(--color-cream);
+            position: relative;
+        }
+
+        .pillars::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--color-gray-200), transparent);
+        }
+
+        .pillars-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+
+        .pillars-header h2 {
+            color: var(--color-navy);
+            margin-bottom: 1rem;
+        }
+
+        .pillars-header p {
+            color: var(--color-gray-600);
+            font-size: 1.1rem;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .pillar-card {
+            background: var(--color-white);
+            padding: 2.5rem;
+            border-radius: 4px;
+            border: 1px solid var(--color-gray-200);
+            transition: all var(--transition-medium);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--color-gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform var(--transition-medium);
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            border-color: transparent;
+        }
+
+        .pillar-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .pillar-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-indigo) 100%);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--color-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .pillar-card h3 {
+            color: var(--color-navy);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .pillar-card p {
+            color: var(--color-gray-600);
+            margin-bottom: 1.5rem;
+        }
+
+        .pillar-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: var(--color-gold);
+            transition: gap var(--transition-fast);
+        }
+
+        .pillar-link:hover {
+            gap: 0.75rem;
+        }
+
+        /* ==================== IMPACT/WORK ==================== */
+        .impact {
+            background: var(--color-navy);
+            color: var(--color-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .impact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: radial-gradient(ellipse at right, rgba(30, 58, 95, 0.8) 0%, transparent 70%);
+        }
+
+        .impact-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .impact-header .section-label {
+            color: var(--color-gold);
+        }
+
+        .impact-header h2 {
+            margin-bottom: 1rem;
+        }
+
+        .impact-header p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.1rem;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .impact-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 4px;
+            transition: all var(--transition-medium);
+        }
+
+        .impact-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(201, 162, 39, 0.3);
+            transform: translateY(-4px);
+        }
+
+        .impact-card-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .impact-card-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(201, 162, 39, 0.2);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gold);
+            flex-shrink: 0;
+        }
+
+        .impact-card h4 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .impact-card-meta {
+            font-size: 0.85rem;
+            color: var(--color-gold);
+        }
+
+        .impact-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        /* Featured Case Study */
+        .case-study-featured {
+            grid-column: span 2;
+            background: linear-gradient(135deg, rgba(201, 162, 39, 0.15) 0%, rgba(201, 162, 39, 0.05) 100%);
+            border: 1px solid rgba(201, 162, 39, 0.3);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .case-study-featured .case-study-content {
+            padding: 1rem 0 1rem 1rem;
+        }
+
+        .case-study-featured h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .case-study-featured p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+        }
+
+        .case-study-featured .case-study-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        /* ==================== RESEARCH ==================== */
+        .research {
+            background: var(--color-white);
+        }
+
+        .research-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 3rem;
+        }
+
+        .research-header h2 {
+            color: var(--color-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .research-card {
+            border: 1px solid var(--color-gray-200);
+            border-radius: 4px;
+            overflow: hidden;
+            transition: all var(--transition-medium);
+        }
+
+        .research-card:hover {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .research-card-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .research-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-medium);
+        }
+
+        .research-card:hover .research-card-image img {
+            transform: scale(1.05);
+        }
+
+        .research-card-content {
+            padding: 1.5rem;
+        }
+
+        .research-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: rgba(201, 162, 39, 0.15);
+            color: var(--color-gold);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-radius: 2px;
+            margin-bottom: 0.75rem;
+        }
+
+        .research-card h4 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            color: var(--color-navy);
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .research-card p {
+            color: var(--color-gray-600);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .research-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--color-navy);
+            transition: color var(--transition-fast);
+        }
+
+        .research-link:hover {
+            color: var(--color-gold);
+        }
+
+        /* ==================== GET INVOLVED ==================== */
+        .get-involved {
+            background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-gray-100) 100%);
+            position: relative;
+        }
+
+        .get-involved::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--color-gray-200), transparent);
+        }
+
+        .get-involved-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .get-involved-content h2 {
+            color: var(--color-navy);
+            margin-bottom: 1.5rem;
+        }
+
+        .get-involved-content p {
+            color: var(--color-gray-600);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .action-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .action-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--color-gray-200);
+        }
+
+        .action-list li:last-child {
+            border-bottom: none;
+        }
+
+        .action-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--color-navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gold);
+            flex-shrink: 0;
+        }
+
+        .action-text h4 {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-navy);
+            margin-bottom: 0.25rem;
+        }
+
+        .action-text p {
+            font-size: 0.9rem;
+            color: var(--color-gray-600);
+            margin-bottom: 0;
+        }
+
+        /* Newsletter Form */
+        .newsletter-box {
+            background: var(--color-white);
+            padding: 2.5rem;
+            border-radius: 4px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--color-gray-200);
+        }
+
+        .newsletter-box h3 {
+            color: var(--color-navy);
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .newsletter-box > p {
+            color: var(--color-gray-600);
+            margin-bottom: 1.5rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3rem;
+            border: 1px solid var(--color-gray-200);
+            border-radius: 4px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: border-color var(--transition-fast);
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--color-gold);
+        }
+
+        .form-group i {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--color-gray-400);
+        }
+
+        .newsletter-form button {
+            width: 100%;
+        }
+
+        .form-note {
+            font-size: 0.8rem;
+            color: var(--color-gray-400);
+            text-align: center;
+        }
+
+        .form-note i {
+            margin-right: 0.5rem;
+        }
+
+        /* ==================== PARTNERS ==================== */
+        .partners {
+            background: var(--color-white);
+            padding: 4rem 0;
+        }
+
+        .partners-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .partners-header h4 {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-gray-400);
+        }
+
+        .partners-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .partner-logo {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--color-gray-400);
+            opacity: 0.7;
+            transition: opacity var(--transition-fast);
+        }
+
+        .partner-logo:hover {
+            opacity: 1;
+        }
+
+        /* ==================== FOOTER ==================== */
+        footer {
+            background: var(--color-navy);
+            color: var(--color-white);
+            padding: 5rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-brand .logo {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-white);
+            transition: all var(--transition-fast);
+        }
+
+        .social-link:hover {
+            background: var(--color-gold);
+            color: var(--color-navy);
+        }
+
+        .footer-column h4 {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            transition: color var(--transition-fast);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-white);
+        }
+
+        .footer-contact p {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-contact i {
+            color: var(--color-gold);
+            margin-top: 0.25rem;
+        }
+
+        .footer-contact a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: color var(--transition-fast);
+        }
+
+        .footer-contact a:hover {
+            color: var(--color-gold);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-legal a {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+            transition: color var(--transition-fast);
+        }
+
+        .footer-legal a:hover {
+            color: var(--color-white);
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 1024px) {
+            .mission-grid,
+            .get-involved-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .pillars-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .case-study-featured {
+                grid-column: span 1;
+                grid-template-columns: 1fr;
+            }
+
+            .research-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 4rem 0;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-contact {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-stats {
+                flex-wrap: wrap;
+                gap: 2rem;
+            }
+
+            .hero-image {
+                display: none;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* ==================== SCROLL ANIMATIONS ==================== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-landmark"></i>
+                </div>
+                <span>DCRC</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#mission">Mission</a></li>
+                <li><a href="#pillars">Our Pillars</a></li>
+                <li><a href="#impact">Impact</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#get-involved">Get Involved</a></li>
+            </ul>
+            <div class="nav-cta">
+                <span class="nav-contact">
+                    <i class="fas fa-envelope"></i>
+                    info@digitalcivilrights.org
+                </span>
+                <a href="#get-involved" class="btn btn-primary">Take Action</a>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-eyebrow">
+                    <i class="fas fa-shield-halved"></i>
+                    Since 2019 — Protecting Digital Rights
+                </div>
+                <h1>Technology With <span>Humanity</span> at the Core</h1>
+                <p class="hero-description">
+                    The Digital Civil Rights Coalition advances digital civil rights by shaping how technology is designed, governed, and deployed—protecting privacy, promoting equity, and strengthening democratic accountability.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#get-involved" class="btn btn-primary">
+                        <i class="fas fa-hand-fist"></i>
+                        Join the Movement
+                    </a>
+                    <a href="#impact" class="btn btn-secondary">
+                        <i class="fas fa-play"></i>
+                        See Our Impact
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">6+</div>
+                        <div class="stat-label">Years of Impact</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Core Workstreams</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">Global</div>
+                        <div class="stat-label">Partnerships</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission" id="mission">
+        <div class="container">
+            <div class="mission-grid">
+                <div class="mission-content fade-in-left">
+                    <span class="section-label">
+                        <i class="fas fa-bullseye"></i>
+                        Our Mission
+                    </span>
+                    <h2>Bridging Technology and Civil Rights</h2>
+                    <p>
+                        As artificial intelligence, biometric systems, and data-driven decision-making increasingly shape daily life, DCRC has helped bridge a critical gap: translating civil and human rights principles into practical governance approaches for high-risk technologies.
+                    </p>
+                    <p>
+                        Through research, convenings, public education, and global partnerships, we advance rights-protective norms that prioritize privacy, equity, democratic accountability, and community trust.
+                    </p>
+                    <div class="mission-vision">
+                        <h4>Our Vision</h4>
+                        <p>"A global world where all people freely, openly, and intentionally exercise digital citizenship."</p>
+                    </div>
+                </div>
+                <div class="mission-image fade-in-right">
+                    <img src="images/mission-community.png" alt="Community members engaged in digital rights education" id="mission-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pillars Section -->
+    <section class="pillars" id="pillars">
+        <div class="container">
+            <div class="pillars-header fade-in">
+                <span class="section-label">
+                    <i class="fas fa-columns"></i>
+                    Our Three Pillars
+                </span>
+                <h2>The Foundation of Digital Civil Rights</h2>
+                <p>Our work is built on three interconnected pillars that guide our mission to ensure technology serves humanity.</p>
+            </div>
+            <div class="pillars-grid">
+                <div class="pillar-card fade-in">
+                    <div class="pillar-icon">
+                        <i class="fas fa-universal-access"></i>
+                    </div>
+                    <h3>Access</h3>
+                    <p>Educating communities at the margin so they are not left behind with respect to emerging technology. We believe digital literacy is a fundamental right.</p>
+                    <a href="#" class="pillar-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="pillar-card fade-in">
+                    <div class="pillar-icon">
+                        <i class="fas fa-scale-balanced"></i>
+                    </div>
+                    <h3>Accountability</h3>
+                    <p>Holding companies and law enforcement accountable for deploying responsible AI and facial recognition systems that don't disadvantage people based on race, religion, or gender identity.</p>
+                    <a href="#" class="pillar-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="pillar-card fade-in">
+                    <div class="pillar-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Advancement</h3>
+                    <p>Equipping our community with the tools to build their own tech products and create generational wealth for their families through innovation.</p>
+                    <a href="#" class="pillar-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact" id="impact">
+        <div class="container">
+            <div class="impact-header fade-in">
+                <span class="section-label">
+                    <i class="fas fa-chart-line"></i>
+                    Our Impact
+                </span>
+                <h2>Driving Change Through Action</h2>
+                <p>From the White House to global universities, our work has influenced how institutions understand algorithmic bias and technology governance.</p>
+            </div>
+            <div class="impact-grid">
+                <div class="impact-card case-study-featured fade-in">
+                    <div class="case-study-content">
+                        <span class="section-label">Featured Initiative</span>
+                        <h3>White House Facial Recognition Convening</h3>
+                        <p>In 2024, DCRC hosted a high-level policy convening at the White House's Eisenhower Executive Office Building, bringing together policymakers, technologists, civil society leaders, and legal experts to address the civil liberties risks of facial recognition technology.</p>
+                        <a href="#" class="btn btn-secondary">
+                            Read Case Study <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="case-study-image">
+                        <img src="images/whitehouse-convening.png" alt="DCRC White House Convening on Facial Recognition Policy" id="whitehouse-img">
+                    </div>
+                </div>
+                <div class="impact-card fade-in">
+                    <div class="impact-card-header">
+                        <div class="impact-card-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div>
+                            <h4>Eyes Off My Data</h4>
+                            <span class="impact-card-meta">Partnership on AI & Apple</span>
+                        </div>
+                    </div>
+                    <p>Established a rights-aware framework for navigating demographic data "choice points" in bias assessment—balancing privacy, fairness, and accountability.</p>
+                </div>
+                <div class="impact-card fade-in">
+                    <div class="impact-card-header">
+                        <div class="impact-card-icon">
+                            <i class="fas fa-globe-asia"></i>
+                        </div>
+                        <div>
+                            <h4>Global AI Governance</h4>
+                            <span class="impact-card-meta">University of Tokyo & Kyoto Law School</span>
+                        </div>
+                    </div>
+                    <p>Created structured spaces for cross-border learning on emerging governance challenges at the environment–technology interface through international roundtables.</p>
+                </div>
+                <div class="impact-card fade-in">
+                    <div class="impact-card-header">
+                        <div class="impact-card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h4>Necessary Trouble Toolkit</h4>
+                            <span class="impact-card-meta">Civic Education Platform</span>
+                        </div>
+                    </div>
+                    <p>Enabled advocates to move from awareness to sustained local action through accessible civic education resources on police accountability.</p>
+                </div>
+                <div class="impact-card fade-in">
+                    <div class="impact-card-header">
+                        <div class="impact-card-icon">
+                            <i class="fas fa-gavel"></i>
+                        </div>
+                        <div>
+                            <h4>Legal Sector Accountability</h4>
+                            <span class="impact-card-meta">National Bar Association</span>
+                        </div>
+                    </div>
+                    <p>Elevated conversations about professional responsibility and DEI practices as corporate and technology clients exert increasing influence on the legal profession.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="research" id="research">
+        <div class="container">
+            <div class="research-header fade-in">
+                <div>
+                    <span class="section-label">
+                        <i class="fas fa-microscope"></i>
+                        Research & Resources
+                    </span>
+                    <h2>Knowledge for Action</h2>
+                </div>
+                <a href="#" class="btn btn-outline">
+                    View All Resources <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="research-grid">
+                <div class="research-card fade-in">
+                    <div class="research-card-image">
+                        <img src="images/eyes-off-my-data.png" alt="Eyes Off My Data - Partnership on AI Research Publication" id="research-ai-img">
+                    </div>
+                    <div class="research-card-content">
+                        <span class="research-tag">Technical Paper</span>
+                        <h4>Eyes Off My Data: Exploring Differentially Private Federated Statistics</h4>
+                        <p>Supporting algorithmic bias assessments across demographic groups while preserving privacy.</p>
+                        <a href="https://partnershiponai.org/paper/eyes-off-my-data/1/#Executive_Summary" target="_blank" rel="noopener" class="research-link">
+                            Read Publication <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="research-card fade-in">
+                    <div class="research-card-image">
+                        <img src="images/breathing-room-toolkit.png" alt="Breathing Room - The Necessary Trouble Toolkit" id="research-civic-img">
+                    </div>
+                    <div class="research-card-content">
+                        <span class="research-tag">Toolkit</span>
+                        <h4>Breathing Room: A Creative Coalition</h4>
+                        <p>A public-facing civic education resource designed to make police accountability structures legible and actionable.</p>
+                        <a href="https://makebreathingroom.com/" target="_blank" rel="noopener" class="research-link">
+                            Access Toolkit <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="research-card fade-in">
+                    <div class="research-card-image">
+                        <img src="images/nba-panel.png" alt="National Bar Association Panel - Tech Companies and Diversity" id="research-global-img">
+                    </div>
+                    <div class="research-card-content">
+                        <span class="research-tag">Legal Convening</span>
+                        <h4>National Bar Association: Tech Companies Are Pressuring Firms on Diversity</h4>
+                        <p>Examining how technology-driven pressures shape governance, procurement, and DEI practices in the legal profession.</p>
+                        <a href="https://www.law.com/corpcounsel/2019/07/23/national-bar-association-panel-tech-companies-are-pressuring-firms-on-diversity/" target="_blank" rel="noopener" class="research-link">
+                            Read Article <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section class="get-involved" id="get-involved">
+        <div class="container">
+            <div class="get-involved-grid">
+                <div class="get-involved-content fade-in-left">
+                    <span class="section-label">
+                        <i class="fas fa-hands-helping"></i>
+                        Get Involved
+                    </span>
+                    <h2>Join the Movement for Digital Civil Rights</h2>
+                    <p>Whether you're a policymaker, technologist, advocate, or concerned citizen, there's a place for you in the fight for digital equity and accountability.</p>
+                    <ul class="action-list">
+                        <li>
+                            <div class="action-icon">
+                                <i class="fas fa-pen-fancy"></i>
+                            </div>
+                            <div class="action-text">
+                                <h4>Sign Our Digital Declaration of Rights</h4>
+                                <p>Add your voice to the growing movement demanding clear boundaries for technology in society.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="action-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="action-text">
+                                <h4>Attend a Convening</h4>
+                                <p>Join decision-makers across sectors to address civil liberties risks of emerging technologies.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="action-icon">
+                                <i class="fas fa-hand-holding-heart"></i>
+                            </div>
+                            <div class="action-text">
+                                <h4>Support Our Work</h4>
+                                <p>Your contribution enables research, education, and advocacy that protects digital rights.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-hand-fist"></i>
+                        Take Action Now
+                    </a>
+                </div>
+                <div class="newsletter-box fade-in-right">
+                    <h3>Stay Informed</h3>
+                    <p>Get the latest updates on digital rights, policy developments, and opportunities to take action.</p>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <i class="fas fa-building"></i>
+                            <input type="text" placeholder="Organization (Optional)">
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Subscribe to Updates
+                        </button>
+                        <p class="form-note">
+                            <i class="fas fa-lock"></i>
+                            We respect your privacy. Unsubscribe anytime.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners">
+        <div class="container">
+            <div class="partners-header">
+                <h4>Trusted Partners & Collaborators</h4>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-logo"><i class="fas fa-handshake"></i> Partnership on AI</div>
+                <div class="partner-logo"><i class="fas fa-university"></i> University of Tokyo</div>
+                <div class="partner-logo"><i class="fas fa-balance-scale"></i> National Bar Association</div>
+                <div class="partner-logo"><i class="fas fa-school"></i> Kyoto Law School</div>
+                <div class="partner-logo"><i class="fas fa-landmark"></i> White House EEOB</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                        <span>Digital Civil Rights Coalition</span>
+                    </a>
+                    <p>Working at the intersection of technology, civil rights, and governance to ensure emerging technologies are designed and deployed with humanity at the core.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Medium">
+                            <i class="fab fa-medium-m"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Our Work</h4>
+                    <ul class="footer-links">
+                        <li><a href="#pillars">Our Pillars</a></li>
+                        <li><a href="#impact">Impact Stories</a></li>
+                        <li><a href="#research">Research</a></li>
+                        <li><a href="#">Policy Briefs</a></li>
+                        <li><a href="#">Convenings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Get Involved</h4>
+                    <ul class="footer-links">
+                        <li><a href="#get-involved">Take Action</a></li>
+                        <li><a href="#">Donate</a></li>
+                        <li><a href="#">Partner With Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@digitalcivilrights.org">info@digitalcivilrights.org</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+12025551234">(202) 555-1234</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Washington, D.C.<br>United States</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-clock"></i>
+                        <span>Mon–Fri: 9AM–6PM EST</span>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Digital Civil Rights Coalition. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
