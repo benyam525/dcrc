@@ -7,6 +7,10 @@
     <meta name="description" content="The Digital Civil Rights Coalition advances digital civil rights by shaping how technology is designed, governed, and deployed—protecting privacy, promoting equity, and strengthening democratic accountability.">
     <meta name="keywords" content="digital civil rights, AI governance, algorithmic bias, facial recognition policy, data privacy, tech accountability, civic technology, digital equity">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
     <!-- Open Graph -->
     <meta property="og:title" content="Digital Civil Rights Coalition">
     <meta property="og:description" content="Shaping how technology is designed, governed, and deployed with humanity at the core.">
@@ -274,6 +278,81 @@
             color: var(--color-white);
             font-size: 1.5rem;
             cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* Mobile Menu Overlay */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--color-navy);
+            z-index: 999;
+            padding: 100px 2rem 2rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-medium);
+        }
+
+        .mobile-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu-links {
+            list-style: none;
+            text-align: center;
+        }
+
+        .mobile-menu-links li {
+            margin-bottom: 1.5rem;
+        }
+
+        .mobile-menu-links a {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--color-white);
+            transition: color var(--transition-fast);
+        }
+
+        .mobile-menu-links a:hover {
+            color: var(--color-gold);
+        }
+
+        .mobile-menu-cta {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-menu-cta .btn {
+            width: 100%;
+            max-width: 300px;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .mobile-menu-contact {
+            text-align: center;
+            margin-top: 2rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        .mobile-menu-contact i {
+            color: var(--color-gold);
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
         }
 
         /* ==================== HERO ==================== */
@@ -1026,6 +1105,98 @@
             opacity: 1;
         }
 
+        /* ==================== DONATE ==================== */
+        .donate {
+            background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-amber) 100%);
+            padding: 5rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .donate::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .donate-content {
+            position: relative;
+            z-index: 10;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .donate-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--color-navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: var(--color-gold);
+        }
+
+        .donate h2 {
+            color: var(--color-navy);
+            margin-bottom: 1rem;
+        }
+
+        .donate p {
+            color: var(--color-navy);
+            opacity: 0.85;
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+        }
+
+        .donate-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .donate .btn-dark {
+            background: var(--color-navy);
+            color: var(--color-white);
+        }
+
+        .donate .btn-dark:hover {
+            background: var(--color-navy-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(10, 22, 40, 0.4);
+        }
+
+        .donate .btn-outline-dark {
+            background: transparent;
+            color: var(--color-navy);
+            border: 2px solid var(--color-navy);
+        }
+
+        .donate .btn-outline-dark:hover {
+            background: var(--color-navy);
+            color: var(--color-white);
+        }
+
+        .donate-note {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-navy);
+            opacity: 0.7;
+        }
+
+        .donate-note i {
+            margin-right: 0.5rem;
+        }
+
         /* ==================== FOOTER ==================== */
         footer {
             background: var(--color-navy);
@@ -1278,13 +1449,40 @@
                     <i class="fas fa-envelope"></i>
                     info@digitalcivilrights.org
                 </span>
-                <a href="#get-involved" class="btn btn-primary">Take Action</a>
+                <a href="#donate" class="btn btn-primary">
+                    <i class="fas fa-heart"></i>
+                    Donate
+                </a>
             </div>
             <button class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-menu-links">
+            <li><a href="#mission" class="mobile-link">Mission</a></li>
+            <li><a href="#pillars" class="mobile-link">Our Pillars</a></li>
+            <li><a href="#impact" class="mobile-link">Impact</a></li>
+            <li><a href="#research" class="mobile-link">Research</a></li>
+            <li><a href="#get-involved" class="mobile-link">Get Involved</a></li>
+        </ul>
+        <div class="mobile-menu-cta">
+            <a href="#donate" class="btn btn-primary mobile-link">
+                <i class="fas fa-heart"></i>
+                Donate
+            </a>
+            <a href="#get-involved" class="btn btn-secondary mobile-link">
+                <i class="fas fa-hand-fist"></i>
+                Take Action
+            </a>
+        </div>
+        <div class="mobile-menu-contact">
+            <p><i class="fas fa-envelope"></i> info@digitalcivilrights.org</p>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -1630,6 +1828,33 @@
         </div>
     </section>
 
+    <!-- Donate Section -->
+    <section class="donate" id="donate">
+        <div class="container">
+            <div class="donate-content fade-in">
+                <div class="donate-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h2>Support Digital Civil Rights</h2>
+                <p>Your contribution enables critical research, community education, and policy advocacy that protects digital rights for marginalized communities. Together, we can ensure technology serves humanity.</p>
+                <div class="donate-buttons">
+                    <a href="#" class="btn btn-dark" onclick="alert('Donate functionality coming soon! Contact info@digitalcivilrights.org to support our work.'); return false;">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        Make a Donation
+                    </a>
+                    <a href="#" class="btn btn-outline-dark" onclick="alert('Monthly giving program coming soon! Contact info@digitalcivilrights.org for more information.'); return false;">
+                        <i class="fas fa-sync-alt"></i>
+                        Become a Monthly Supporter
+                    </a>
+                </div>
+                <p class="donate-note">
+                    <i class="fas fa-shield-alt"></i>
+                    DCRC is a 501(c)(3) nonprofit. Your donation may be tax-deductible.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -1671,7 +1896,7 @@
                     <h4>Get Involved</h4>
                     <ul class="footer-links">
                         <li><a href="#get-involved">Take Action</a></li>
-                        <li><a href="#">Donate</a></li>
+                        <li><a href="#donate">Donate</a></li>
                         <li><a href="#">Partner With Us</a></li>
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">Press</a></li>
@@ -1749,6 +1974,41 @@
                     });
                 }
             });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+
+            // Toggle icon between bars and X
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+
+        // Close menu when clicking a link
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (isMenuOpen) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && isMenuOpen) {
+                toggleMenu();
+            }
         });
     </script>
 </body>
