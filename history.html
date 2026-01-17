@@ -26,19 +26,31 @@
 
     <style>
         :root {
-            --color-navy: #0a1628;
-            --color-navy-light: #152238;
-            --color-indigo: #1e3a5f;
-            --color-gold: #c9a227;
-            --color-gold-light: #e8c547;
-            --color-amber: #f5a623;
-            --color-cream: #faf8f5;
+            /* Primary Colors */
+            --color-dark: #181417;
+            --color-teal: #142535;
+
+            /* Warm Earth Tones */
+            --color-brown-dark: #6E4436;
+            --color-brown-medium: #96634E;
+            --color-taupe: #C8AEA4;
+
+            /* Supporting Colors */
+            --color-cream: #F5F0ED;
             --color-white: #ffffff;
             --color-gray-100: #f7f7f7;
             --color-gray-200: #e5e5e5;
             --color-gray-400: #9ca3af;
             --color-gray-600: #4b5563;
             --color-gray-800: #1f2937;
+
+            /* Legacy mappings */
+            --color-navy: #181417;
+            --color-navy-light: #142535;
+            --color-indigo: #142535;
+            --color-gold: #6E4436;
+            --color-gold-light: #96634E;
+            --color-amber: #96634E;
 
             --font-display: 'Cormorant Garamond', Georgia, serif;
             --font-body: 'DM Sans', -apple-system, sans-serif;
@@ -113,14 +125,14 @@
         }
 
         .btn-primary {
-            background: var(--color-gold);
-            color: var(--color-navy);
+            background: var(--color-brown-dark);
+            color: var(--color-white);
         }
 
         .btn-primary:hover {
-            background: var(--color-gold-light);
+            background: var(--color-brown-medium);
             transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(201, 162, 39, 0.4);
+            box-shadow: 0 4px 20px rgba(110, 68, 54, 0.4);
         }
 
         .btn-secondary {
@@ -146,7 +158,7 @@
             font-weight: 600;
             letter-spacing: 0.15em;
             text-transform: uppercase;
-            color: var(--color-gold);
+            color: var(--color-brown-dark);
             margin-bottom: 1rem;
         }
 
@@ -162,7 +174,7 @@
             right: 0;
             z-index: 1000;
             padding: 1rem 0;
-            background: rgba(10, 22, 40, 0.95);
+            background: rgba(24, 20, 23, 0.95);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             transition: all var(--transition-medium);
@@ -170,7 +182,7 @@
 
         nav.scrolled {
             padding: 0.75rem 0;
-            background: rgba(10, 22, 40, 0.98);
+            background: rgba(24, 20, 23, 0.98);
         }
 
         .nav-container {
@@ -195,13 +207,13 @@
         .logo-icon {
             width: 44px;
             height: 44px;
-            background: linear-gradient(135deg, var(--color-gold), var(--color-amber));
+            background: linear-gradient(135deg, var(--color-brown-dark), var(--color-brown-medium));
             border-radius: 4px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.1rem;
-            color: var(--color-navy);
+            color: var(--color-white);
         }
 
         .nav-links {
@@ -226,7 +238,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--color-gold);
+            background: var(--color-brown-medium);
             transition: width var(--transition-fast);
         }
 
@@ -250,7 +262,7 @@
         }
 
         .nav-contact i {
-            color: var(--color-gold);
+            color: var(--color-brown-medium);
             margin-right: 0.5rem;
         }
 
@@ -303,7 +315,7 @@
         }
 
         .mobile-menu-links a:hover {
-            color: var(--color-gold);
+            color: var(--color-brown-medium);
         }
 
         .mobile-menu-cta {
@@ -328,7 +340,7 @@
         }
 
         .mobile-menu-contact i {
-            color: var(--color-gold);
+            color: var(--color-brown-medium);
             margin-right: 0.5rem;
         }
 
@@ -340,7 +352,7 @@
 
         /* Page Hero */
         .page-hero {
-            background: var(--color-navy);
+            background: var(--color-dark);
             padding: 10rem 0 5rem;
             text-align: center;
             position: relative;
@@ -354,7 +366,7 @@
             right: -30%;
             width: 100%;
             height: 200%;
-            background: radial-gradient(ellipse at center, rgba(30, 58, 95, 0.8) 0%, transparent 70%);
+            background: radial-gradient(ellipse at center, rgba(20, 37, 53, 0.8) 0%, transparent 70%);
         }
 
         .page-hero h1 {
@@ -400,7 +412,7 @@
         }
 
         .founding-quote {
-            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-indigo) 100%);
+            background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-teal) 100%);
             padding: 3rem;
             border-radius: 4px;
             position: relative;
@@ -414,7 +426,7 @@
             right: 0;
             width: 150px;
             height: 150px;
-            background: radial-gradient(circle, rgba(201, 162, 39, 0.3) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(110, 68, 54, 0.3) 0%, transparent 70%);
         }
 
         .founding-quote blockquote {
@@ -432,7 +444,7 @@
             margin-top: 1.5rem;
             font-style: normal;
             font-size: 0.9rem;
-            color: var(--color-gold);
+            color: var(--color-brown-medium);
         }
 
         /* Timeline Section */
@@ -480,7 +492,7 @@
             transform: translateX(-50%);
             width: 2px;
             height: 100%;
-            background: var(--color-gold);
+            background: var(--color-brown-dark);
         }
 
         .timeline-item {
@@ -518,13 +530,13 @@
             transform: translateX(-50%);
             width: 60px;
             height: 60px;
-            background: var(--color-gold);
+            background: var(--color-brown-dark);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            color: var(--color-navy);
+            color: var(--color-white);
             font-size: 0.9rem;
             z-index: 10;
         }
@@ -543,7 +555,7 @@
 
         /* Vision Section */
         .vision-section {
-            background: var(--color-navy);
+            background: var(--color-dark);
             text-align: center;
             padding: 5rem 0;
         }
@@ -566,12 +578,12 @@
         }
 
         .vision-section .highlight {
-            color: var(--color-gold);
+            color: var(--color-brown-medium);
         }
 
         /* Footer */
         footer {
-            background: var(--color-navy);
+            background: var(--color-teal);
             color: var(--color-white);
             padding: 5rem 0 2rem;
         }
@@ -599,7 +611,7 @@
             font-weight: 600;
             letter-spacing: 0.1em;
             text-transform: uppercase;
-            color: var(--color-gold);
+            color: var(--color-brown-medium);
             margin-bottom: 1.5rem;
         }
 
@@ -631,7 +643,7 @@
         }
 
         .footer-contact i {
-            color: var(--color-gold);
+            color: var(--color-brown-medium);
             margin-top: 0.25rem;
         }
 
@@ -641,7 +653,7 @@
         }
 
         .footer-contact a:hover {
-            color: var(--color-gold);
+            color: var(--color-brown-medium);
         }
 
         .footer-bottom {
