@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact Stories | Digital Civil Rights Coalition</title>
+    <meta name="description" content="Read testimonials and impact stories from partners, advocates, and communities about the Digital Civil Rights Coalition's work.">
+    <meta name="keywords" content="digital civil rights, testimonials, impact stories, DCRC partners">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Impact Stories | Digital Civil Rights Coalition">
+    <meta property="og:description" content="Stories of impact from DCRC's work in digital civil rights.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --color-navy: #0a1628;
+            --color-navy-light: #152238;
+            --color-indigo: #1e3a5f;
+            --color-gold: #c9a227;
+            --color-gold-light: #e8c547;
+            --color-amber: #f5a623;
+            --color-cream: #faf8f5;
+            --color-white: #ffffff;
+            --color-gray-100: #f7f7f7;
+            --color-gray-200: #e5e5e5;
+            --color-gray-400: #9ca3af;
+            --color-gray-600: #4b5563;
+            --color-gray-800: #1f2937;
+
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, sans-serif;
+
+            --transition-fast: 0.2s ease;
+            --transition-medium: 0.4s ease;
+            --transition-slow: 0.6s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--color-gray-800);
+            background-color: var(--color-cream);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
+        h4 { font-size: 1.25rem; }
+
+        p { margin-bottom: 1rem; }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .btn-primary {
+            background: var(--color-gold);
+            color: var(--color-navy);
+        }
+
+        .btn-primary:hover {
+            background: var(--color-gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(201, 162, 39, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-white);
+            border: 2px solid var(--color-white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-white);
+            color: var(--color-navy);
+        }
+
+        section {
+            padding: 6rem 0;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 1rem;
+        }
+
+        .section-label i {
+            font-size: 0.7rem;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all var(--transition-medium);
+        }
+
+        nav.scrolled {
+            padding: 0.75rem 0;
+            background: rgba(10, 22, 40, 0.98);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--color-white);
+        }
+
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--color-gold), var(--color-amber));
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: var(--color-navy);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.8);
+            transition: color var(--transition-fast);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-gold);
+            transition: width var(--transition-fast);
+        }
+
+        .nav-links a:hover {
+            color: var(--color-white);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .nav-contact {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .nav-contact i {
+            color: var(--color-gold);
+            margin-right: 0.5rem;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--color-white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--color-navy);
+            z-index: 999;
+            padding: 100px 2rem 2rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-medium);
+        }
+
+        .mobile-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu-links {
+            list-style: none;
+            text-align: center;
+        }
+
+        .mobile-menu-links li {
+            margin-bottom: 1.5rem;
+        }
+
+        .mobile-menu-links a {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--color-white);
+            transition: color var(--transition-fast);
+        }
+
+        .mobile-menu-links a:hover {
+            color: var(--color-gold);
+        }
+
+        .mobile-menu-cta {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-menu-cta .btn {
+            width: 100%;
+            max-width: 300px;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .mobile-menu-contact {
+            text-align: center;
+            margin-top: 2rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        .mobile-menu-contact i {
+            color: var(--color-gold);
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+        }
+
+        /* Page Hero */
+        .page-hero {
+            background: var(--color-navy);
+            padding: 10rem 0 5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -30%;
+            width: 100%;
+            height: 200%;
+            background: radial-gradient(ellipse at center, rgba(30, 58, 95, 0.8) 0%, transparent 70%);
+        }
+
+        .page-hero h1 {
+            color: var(--color-white);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .page-hero h1 span {
+            color: var(--color-gold);
+        }
+
+        .page-hero p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            background: var(--color-white);
+        }
+
+        .testimonials-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+
+        .testimonials-intro h2 {
+            color: var(--color-navy);
+            margin-bottom: 1rem;
+        }
+
+        .testimonials-intro p {
+            color: var(--color-gray-600);
+            font-size: 1.1rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--color-cream);
+            padding: 2.5rem;
+            border-radius: 4px;
+            position: relative;
+            transition: all var(--transition-medium);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-card::before {
+            content: '\201C';
+            position: absolute;
+            top: 1.5rem;
+            left: 2rem;
+            font-family: var(--font-display);
+            font-size: 4rem;
+            color: var(--color-gold);
+            opacity: 0.3;
+            line-height: 1;
+        }
+
+        .testimonial-quote {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-style: italic;
+            color: var(--color-gray-800);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--color-gold);
+        }
+
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-avatar-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-indigo) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gold);
+            font-size: 1.5rem;
+        }
+
+        .testimonial-info h4 {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-navy);
+            margin-bottom: 0.25rem;
+        }
+
+        .testimonial-info p {
+            font-size: 0.9rem;
+            color: var(--color-gray-600);
+            margin-bottom: 0;
+        }
+
+        /* Featured Testimonial */
+        .featured-testimonial {
+            grid-column: span 2;
+            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-indigo) 100%);
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .featured-testimonial::before {
+            display: none;
+        }
+
+        .featured-image {
+            height: 100%;
+            min-height: 300px;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .featured-image-placeholder {
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gold);
+            font-size: 4rem;
+        }
+
+        .featured-content .testimonial-quote {
+            color: var(--color-white);
+            font-size: 1.5rem;
+        }
+
+        .featured-content .testimonial-info h4 {
+            color: var(--color-white);
+        }
+
+        .featured-content .testimonial-info p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* CTA Section */
+        .share-story-cta {
+            background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-amber) 100%);
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .share-story-cta h2 {
+            color: var(--color-navy);
+            margin-bottom: 1rem;
+        }
+
+        .share-story-cta p {
+            color: var(--color-navy);
+            opacity: 0.85;
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .share-story-cta .btn-dark {
+            background: var(--color-navy);
+            color: var(--color-white);
+        }
+
+        .share-story-cta .btn-dark:hover {
+            background: var(--color-navy-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(10, 22, 40, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-navy);
+            color: var(--color-white);
+            padding: 5rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-brand .logo {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-column h4 {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            transition: color var(--transition-fast);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-white);
+        }
+
+        .footer-contact p {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-contact i {
+            color: var(--color-gold);
+            margin-top: 0.25rem;
+        }
+
+        .footer-contact a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: color var(--transition-fast);
+        }
+
+        .footer-contact a:hover {
+            color: var(--color-gold);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-legal a {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+            transition: color var(--transition-fast);
+        }
+
+        .footer-legal a:hover {
+            color: var(--color-white);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-testimonial {
+                grid-column: span 1;
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 4rem 0;
+            }
+
+            .container {
+                padding: 0 1.25rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-contact {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .page-hero {
+                padding: 8rem 0 4rem;
+            }
+
+            .page-hero h1 {
+                font-size: 2.25rem;
+            }
+
+            .testimonial-card {
+                padding: 2rem;
+            }
+
+            .testimonial-quote {
+                font-size: 1.1rem;
+            }
+
+            .featured-content .testimonial-quote {
+                font-size: 1.25rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-legal {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .page-hero h1 {
+                font-size: 1.85rem;
+            }
+
+            .testimonial-card {
+                padding: 1.5rem;
+            }
+
+            .testimonial-author {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo span {
+                display: none;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-landmark"></i>
+                </div>
+                <span>DCRC</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#mission">Mission</a></li>
+                <li><a href="index.html#pillars">Our Pillars</a></li>
+                <li><a href="index.html#impact">Impact</a></li>
+                <li><a href="index.html#research">Research</a></li>
+                <li><a href="index.html#get-involved">Get Involved</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="history.html">Our Story</a></li>
+            </ul>
+            <div class="nav-cta">
+                <span class="nav-contact">
+                    <i class="fas fa-envelope"></i>
+                    info@digitalcivilrights.org
+                </span>
+                <a href="index.html#donate" class="btn btn-primary">
+                    <i class="fas fa-heart"></i>
+                    Donate
+                </a>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-menu-links">
+            <li><a href="index.html#mission" class="mobile-link">Mission</a></li>
+            <li><a href="index.html#pillars" class="mobile-link">Our Pillars</a></li>
+            <li><a href="index.html#impact" class="mobile-link">Impact</a></li>
+            <li><a href="index.html#research" class="mobile-link">Research</a></li>
+            <li><a href="index.html#get-involved" class="mobile-link">Get Involved</a></li>
+            <li><a href="team.html" class="mobile-link">Team</a></li>
+            <li><a href="history.html" class="mobile-link">Our Story</a></li>
+        </ul>
+        <div class="mobile-menu-cta">
+            <a href="index.html#donate" class="btn btn-primary mobile-link">
+                <i class="fas fa-heart"></i>
+                Donate
+            </a>
+            <a href="index.html#get-involved" class="btn btn-secondary mobile-link">
+                <i class="fas fa-hand-fist"></i>
+                Take Action
+            </a>
+        </div>
+        <div class="mobile-menu-contact">
+            <p><i class="fas fa-envelope"></i> info@digitalcivilrights.org</p>
+        </div>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Impact <span>Stories</span></h1>
+            <p>Hear from partners, advocates, and communities about the difference DCRC is making in the fight for digital civil rights.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="testimonials-intro fade-in">
+                <span class="section-label">
+                    <i class="fas fa-quote-left"></i>
+                    Voices of Impact
+                </span>
+                <h2>What Our Partners Say</h2>
+                <p>From policymakers to community organizers, our work is making a real difference in how technology serves humanity.</p>
+            </div>
+            <div class="testimonials-grid">
+                <!-- Featured Testimonial -->
+                <div class="testimonial-card featured-testimonial fade-in">
+                    <div class="featured-image">
+                        <div class="featured-image-placeholder">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                    </div>
+                    <div class="featured-content">
+                        <p class="testimonial-quote">"DCRC's White House convening was a pivotal moment in bringing together diverse stakeholders to address the civil liberties implications of facial recognition technology. Their ability to bridge technical, legal, and community perspectives is unmatched."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">
+                                <div class="testimonial-avatar-placeholder">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            </div>
+                            <div class="testimonial-info">
+                                <h4>Policy Partner</h4>
+                                <p>White House Convening Participant</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-quote">"The 'Eyes Off My Data' research collaboration with DCRC helped us understand how to balance algorithmic fairness with privacy protection. Their civil rights-centered approach was invaluable."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <div class="testimonial-avatar-placeholder">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Research Partner</h4>
+                            <p>Partnership on AI</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-quote">"DCRC's international roundtables created essential dialogue between Japanese and American scholars on AI governance. They're building bridges that will shape global technology policy."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <div class="testimonial-avatar-placeholder">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Academic Partner</h4>
+                            <p>University of Tokyo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-quote">"The Necessary Trouble Toolkit gave our community the resources we needed to understand and engage with police accountability structures. DCRC makes complex systems accessible."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <div class="testimonial-avatar-placeholder">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Community Organizer</h4>
+                            <p>Breathing Room Coalition</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-quote">"DCRC brought critical attention to how technology companies influence diversity practices in our profession. Their panel at our convention sparked important conversations."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <div class="testimonial-avatar-placeholder">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Legal Professional</h4>
+                            <p>National Bar Association</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Share Your Story CTA -->
+    <section class="share-story-cta">
+        <div class="container">
+            <h2>Share Your Story</h2>
+            <p>Has DCRC's work impacted your community or organization? We'd love to hear from you and share your experience.</p>
+            <a href="mailto:info@digitalcivilrights.org?subject=My%20DCRC%20Impact%20Story" class="btn btn-dark">
+                <i class="fas fa-envelope"></i>
+                Share Your Story
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                        <span>Digital Civil Rights Coalition</span>
+                    </a>
+                    <p>Working at the intersection of technology, civil rights, and governance to ensure emerging technologies are designed and deployed with humanity at the core.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Our Work</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#pillars">Our Pillars</a></li>
+                        <li><a href="index.html#research">Research</a></li>
+                        <li><a href="index.html#research">Policy Briefs</a></li>
+                        <li><a href="index.html#impact">Convenings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>About Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="history.html">Our Story</a></li>
+                        <li><a href="testimonials.html">Impact Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Get Involved</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#get-involved">Take Action</a></li>
+                        <li><a href="index.html#donate">Donate</a></li>
+                        <li><a href="index.html#get-involved">Partner With Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@digitalcivilrights.org">info@digitalcivilrights.org</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+12025551234">(202) 555-1234</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Washington, D.C.<br>United States</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-clock"></i>
+                        <span>Mon–Fri: 9AM–6PM EST</span>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Digital Civil Rights Coalition. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (isMenuOpen) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && isMenuOpen) {
+                toggleMenu();
+            }
+        });
+    </script>
+</body>
+</html>

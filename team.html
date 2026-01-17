@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet the Team | Digital Civil Rights Coalition</title>
+    <meta name="description" content="Meet the dedicated team behind the Digital Civil Rights Coalition working to protect privacy, promote equity, and strengthen democratic accountability in technology.">
+    <meta name="keywords" content="digital civil rights, DCRC team, leadership, tech policy experts">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Meet the Team | Digital Civil Rights Coalition">
+    <meta property="og:description" content="Meet the dedicated team advancing digital civil rights.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --color-navy: #0a1628;
+            --color-navy-light: #152238;
+            --color-indigo: #1e3a5f;
+            --color-gold: #c9a227;
+            --color-gold-light: #e8c547;
+            --color-amber: #f5a623;
+            --color-cream: #faf8f5;
+            --color-white: #ffffff;
+            --color-gray-100: #f7f7f7;
+            --color-gray-200: #e5e5e5;
+            --color-gray-400: #9ca3af;
+            --color-gray-600: #4b5563;
+            --color-gray-800: #1f2937;
+
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, sans-serif;
+
+            --transition-fast: 0.2s ease;
+            --transition-medium: 0.4s ease;
+            --transition-slow: 0.6s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--color-gray-800);
+            background-color: var(--color-cream);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
+        h4 { font-size: 1.25rem; }
+
+        p { margin-bottom: 1rem; }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .btn-primary {
+            background: var(--color-gold);
+            color: var(--color-navy);
+        }
+
+        .btn-primary:hover {
+            background: var(--color-gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(201, 162, 39, 0.4);
+        }
+
+        section {
+            padding: 6rem 0;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 1rem;
+        }
+
+        .section-label i {
+            font-size: 0.7rem;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all var(--transition-medium);
+        }
+
+        nav.scrolled {
+            padding: 0.75rem 0;
+            background: rgba(10, 22, 40, 0.98);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--color-white);
+        }
+
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--color-gold), var(--color-amber));
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: var(--color-navy);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.8);
+            transition: color var(--transition-fast);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-gold);
+            transition: width var(--transition-fast);
+        }
+
+        .nav-links a:hover {
+            color: var(--color-white);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .nav-contact {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .nav-contact i {
+            color: var(--color-gold);
+            margin-right: 0.5rem;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--color-white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--color-navy);
+            z-index: 999;
+            padding: 100px 2rem 2rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-medium);
+        }
+
+        .mobile-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu-links {
+            list-style: none;
+            text-align: center;
+        }
+
+        .mobile-menu-links li {
+            margin-bottom: 1.5rem;
+        }
+
+        .mobile-menu-links a {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--color-white);
+            transition: color var(--transition-fast);
+        }
+
+        .mobile-menu-links a:hover {
+            color: var(--color-gold);
+        }
+
+        .mobile-menu-cta {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-menu-cta .btn {
+            width: 100%;
+            max-width: 300px;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .mobile-menu-contact {
+            text-align: center;
+            margin-top: 2rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        .mobile-menu-contact i {
+            color: var(--color-gold);
+            margin-right: 0.5rem;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-white);
+            border: 2px solid var(--color-white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-white);
+            color: var(--color-navy);
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+        }
+
+        /* Page Hero */
+        .page-hero {
+            background: var(--color-navy);
+            padding: 10rem 0 5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -30%;
+            width: 100%;
+            height: 200%;
+            background: radial-gradient(ellipse at center, rgba(30, 58, 95, 0.8) 0%, transparent 70%);
+        }
+
+        .page-hero h1 {
+            color: var(--color-white);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .page-hero h1 span {
+            color: var(--color-gold);
+        }
+
+        .page-hero p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Team Section */
+        .team-section {
+            background: var(--color-white);
+        }
+
+        .team-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+
+        .team-intro h2 {
+            color: var(--color-navy);
+            margin-bottom: 1rem;
+        }
+
+        .team-intro p {
+            color: var(--color-gray-600);
+            font-size: 1.1rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        .team-card {
+            text-align: center;
+            padding: 2.5rem;
+            background: var(--color-cream);
+            border-radius: 4px;
+            transition: all var(--transition-medium);
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            overflow: hidden;
+            border: 4px solid var(--color-gold);
+        }
+
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-photo-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-indigo) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gold);
+            font-size: 4rem;
+        }
+
+        .team-card h3 {
+            color: var(--color-navy);
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .team-role {
+            color: var(--color-gold);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        .team-bio {
+            color: var(--color-gray-600);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .team-cta {
+            background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-amber) 100%);
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .team-cta h2 {
+            color: var(--color-navy);
+            margin-bottom: 1rem;
+        }
+
+        .team-cta p {
+            color: var(--color-navy);
+            opacity: 0.85;
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .team-cta .btn-dark {
+            background: var(--color-navy);
+            color: var(--color-white);
+        }
+
+        .team-cta .btn-dark:hover {
+            background: var(--color-navy-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(10, 22, 40, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-navy);
+            color: var(--color-white);
+            padding: 5rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-brand .logo {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-column h4 {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            transition: color var(--transition-fast);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-white);
+        }
+
+        .footer-contact p {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-contact i {
+            color: var(--color-gold);
+            margin-top: 0.25rem;
+        }
+
+        .footer-contact a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: color var(--transition-fast);
+        }
+
+        .footer-contact a:hover {
+            color: var(--color-gold);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-legal a {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+            transition: color var(--transition-fast);
+        }
+
+        .footer-legal a:hover {
+            color: var(--color-white);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 4rem 0;
+            }
+
+            .container {
+                padding: 0 1.25rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-contact {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .page-hero {
+                padding: 8rem 0 4rem;
+            }
+
+            .page-hero h1 {
+                font-size: 2.25rem;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-card {
+                padding: 2rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-legal {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .page-hero h1 {
+                font-size: 1.85rem;
+            }
+
+            .team-photo {
+                width: 150px;
+                height: 150px;
+            }
+
+            .logo span {
+                display: none;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-landmark"></i>
+                </div>
+                <span>DCRC</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#mission">Mission</a></li>
+                <li><a href="index.html#pillars">Our Pillars</a></li>
+                <li><a href="index.html#impact">Impact</a></li>
+                <li><a href="index.html#research">Research</a></li>
+                <li><a href="index.html#get-involved">Get Involved</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="history.html">Our Story</a></li>
+            </ul>
+            <div class="nav-cta">
+                <span class="nav-contact">
+                    <i class="fas fa-envelope"></i>
+                    info@digitalcivilrights.org
+                </span>
+                <a href="index.html#donate" class="btn btn-primary">
+                    <i class="fas fa-heart"></i>
+                    Donate
+                </a>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-menu-links">
+            <li><a href="index.html#mission" class="mobile-link">Mission</a></li>
+            <li><a href="index.html#pillars" class="mobile-link">Our Pillars</a></li>
+            <li><a href="index.html#impact" class="mobile-link">Impact</a></li>
+            <li><a href="index.html#research" class="mobile-link">Research</a></li>
+            <li><a href="index.html#get-involved" class="mobile-link">Get Involved</a></li>
+            <li><a href="team.html" class="mobile-link">Team</a></li>
+            <li><a href="history.html" class="mobile-link">Our Story</a></li>
+        </ul>
+        <div class="mobile-menu-cta">
+            <a href="index.html#donate" class="btn btn-primary mobile-link">
+                <i class="fas fa-heart"></i>
+                Donate
+            </a>
+            <a href="index.html#get-involved" class="btn btn-secondary mobile-link">
+                <i class="fas fa-hand-fist"></i>
+                Take Action
+            </a>
+        </div>
+        <div class="mobile-menu-contact">
+            <p><i class="fas fa-envelope"></i> info@digitalcivilrights.org</p>
+        </div>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Meet the <span>Team</span></h1>
+            <p>The dedicated individuals working to protect digital civil rights and ensure technology serves humanity.</p>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="team-intro fade-in">
+                <span class="section-label">
+                    <i class="fas fa-users"></i>
+                    Our Leadership
+                </span>
+                <h2>Experts in Technology, Policy & Civil Rights</h2>
+                <p>Our team brings together diverse expertise in technology policy, civil rights law, community organizing, and digital equity to drive meaningful change.</p>
+            </div>
+            <div class="team-grid">
+                <!-- Team Member 1 - Placeholder -->
+                <div class="team-card fade-in">
+                    <div class="team-photo">
+                        <div class="team-photo-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <h3>Team Member Name</h3>
+                    <p class="team-role">Founder & Executive Director</p>
+                    <p class="team-bio">Leading DCRC's mission to bridge the gap between technology and civil rights. Brings extensive experience in policy advocacy and community engagement.</p>
+                </div>
+
+                <!-- Team Member 2 - Placeholder -->
+                <div class="team-card fade-in">
+                    <div class="team-photo">
+                        <div class="team-photo-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <h3>Team Member Name</h3>
+                    <p class="team-role">Director of Policy</p>
+                    <p class="team-bio">Leads DCRC's policy research and advocacy initiatives. Expert in AI governance, algorithmic accountability, and technology legislation.</p>
+                </div>
+
+                <!-- Team Member 3 - Placeholder -->
+                <div class="team-card fade-in">
+                    <div class="team-photo">
+                        <div class="team-photo-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <h3>Team Member Name</h3>
+                    <p class="team-role">Director of Community Engagement</p>
+                    <p class="team-bio">Builds bridges between DCRC and communities most impacted by technology. Leads education and outreach programs across the country.</p>
+                </div>
+
+                <!-- Team Member 4 - Placeholder -->
+                <div class="team-card fade-in">
+                    <div class="team-photo">
+                        <div class="team-photo-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <h3>Team Member Name</h3>
+                    <p class="team-role">Research Fellow</p>
+                    <p class="team-bio">Conducts research on facial recognition technology, biometric systems, and their impact on civil liberties and marginalized communities.</p>
+                </div>
+
+                <!-- Team Member 5 - Placeholder -->
+                <div class="team-card fade-in">
+                    <div class="team-photo">
+                        <div class="team-photo-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <h3>Team Member Name</h3>
+                    <p class="team-role">Communications Director</p>
+                    <p class="team-bio">Leads DCRC's communications strategy, amplifying our message and impact through strategic media relations and digital storytelling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="team-cta">
+        <div class="container">
+            <h2>Join Our Team</h2>
+            <p>We're always looking for passionate individuals committed to advancing digital civil rights. Get in touch to learn about opportunities.</p>
+            <a href="mailto:info@digitalcivilrights.org" class="btn btn-dark">
+                <i class="fas fa-envelope"></i>
+                Contact Us
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                        <span>Digital Civil Rights Coalition</span>
+                    </a>
+                    <p>Working at the intersection of technology, civil rights, and governance to ensure emerging technologies are designed and deployed with humanity at the core.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Our Work</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#pillars">Our Pillars</a></li>
+                        <li><a href="index.html#research">Research</a></li>
+                        <li><a href="index.html#research">Policy Briefs</a></li>
+                        <li><a href="index.html#impact">Convenings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>About Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="history.html">Our Story</a></li>
+                        <li><a href="testimonials.html">Impact Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Get Involved</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#get-involved">Take Action</a></li>
+                        <li><a href="index.html#donate">Donate</a></li>
+                        <li><a href="index.html#get-involved">Partner With Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@digitalcivilrights.org">info@digitalcivilrights.org</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+12025551234">(202) 555-1234</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Washington, D.C.<br>United States</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-clock"></i>
+                        <span>Mon–Fri: 9AM–6PM EST</span>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Digital Civil Rights Coalition. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (isMenuOpen) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && isMenuOpen) {
+                toggleMenu();
+            }
+        });
+    </script>
+</body>
+</html>
